@@ -30,7 +30,7 @@ export default function ImageGallery({ gallery }: { gallery: CamperGallery[] }) 
         {gallery.map((item, index) => (
           <SwiperSlide key={index}>
             <div className={css.imageMainContainer}>
-              <img src={item.original} alt={`Camper view ${index + 1}`} />
+              <img src={item.original} alt={`Camper view ${index + 1}`} className={css.main_image}/>
             </div>
           </SwiperSlide>
         ))}
@@ -39,7 +39,7 @@ export default function ImageGallery({ gallery }: { gallery: CamperGallery[] }) 
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={true}
-        spaceBetween={12}
+        spaceBetween={32}
         slidesPerView={4}
         freeMode={true}
         watchSlidesProgress={true}
@@ -49,7 +49,7 @@ export default function ImageGallery({ gallery }: { gallery: CamperGallery[] }) 
         {gallery.map((item, index) => (
           <SwiperSlide key={index} className={css.thumbSlide}>
             <div className={css.imageThumbContainer}>
-               <img src={item.thumb} alt={`Thumbnail ${index + 1}`} />
+               <img src={item.thumb} alt={`Thumbnail ${index + 1}`} className={css.secondary_image} />
             </div>
           </SwiperSlide>
         ))}

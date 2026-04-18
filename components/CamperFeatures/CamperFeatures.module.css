@@ -4,7 +4,7 @@
   gap: 8px;
   list-style: none;
   padding: 0;
-  margin: 24px 0;
+  margin: 16px 0;
 }
 
 .feature_badge {
@@ -12,7 +12,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 18px;
-  background-color: #F2F4F7;
+  background-color: var(--color-gray-200);
   border-radius: 100px;
   font-weight: var(--fw-medium);
   
@@ -27,3 +27,4 @@
   width: 20px;
   height: 20px;
 }
+

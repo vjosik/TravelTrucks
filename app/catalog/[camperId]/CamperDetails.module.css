@@ -1,13 +1,25 @@
-.header {
-  margin-bottom: 28px;
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.camper_info_card {
+  width: 650px;
+  border-radius: 16px;
+  padding: 0 24px;
+  background-color: var(--bg-secondary);
+  margin-bottom: 16px;
+  min-height: 304px;
 }
 
 .title {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
   margin-bottom: 8px;
-  color: #101828;
+  color: var(--color-black);
 }
 
 .meta {
@@ -17,20 +29,21 @@
   margin-bottom: 16px;
 }
 
-.rating, .location {
+.rating,
+.location {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 16px;
+
   line-height: 1.5;
   text-decoration: underline; /* Как на макете у локации и отзывов */
 }
 
 .price {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #101828;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  color: var(--color-black);
   margin-top: 16px;
 }
 
@@ -40,22 +53,25 @@
 }
 
 .description {
-  font-size: 16px;
   line-height: 1.5;
   color: #475467;
 }
 
 /* Сетка контента */
 .detailsGrid {
-  display: grid;
-  grid-template-columns: 1fr 448px;
-  gap: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 16px;
+  padding: 024px;
+
+  background-color: var(--bg-secondary);
 }
 
-/* Стили для характеристик (баджей) */
-/* Эти стили должны применяться к LI внутри CamperFeatures */
 .featuresWrapper {
-  margin-bottom: 44px;
+  margin-bottom: 16px;
 }
 
 /* Если CamperFeatures использует свои стили, убедись, что они такие: */
@@ -64,25 +80,21 @@
   align-items: center;
   gap: 8px;
   padding: 12px 18px;
-  background-color: #F2F4F7;
+  background-color: var(--color-gray-200);
   border-radius: 100px;
   font-weight: 500;
-  font-size: 16px;
-  color: #101828;
+  color: var(--color-black);
 }
 
-/* Таблица деталей */
+
 .subTitle {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.2;
   margin-bottom: 24px;
-  color: #101828;
+  color: var(--color-black);
 }
 
 .divider {
   border: none;
-  border-top: 1px solid #DADDE1;
+  border-top: 1px solid var(--btn-secondary-border);
   margin-bottom: 24px;
 }
 
@@ -95,15 +107,24 @@
 .detailsList li {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.33;
 }
 
 .detailsList li span:first-child {
-  color: #101828;
+  color: var(--color-black);
 }
 
 .detailsList li span:last-child {
-  color: #101828;
+  color: var(--color-black);
+}
+
+.reviews_title {
+  margin-top: 88px;
+  margin-bottom: 24px;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 64px;
 }

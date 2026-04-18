@@ -1,12 +1,12 @@
 .filters {
   width: 360px;
-  padding: 24px; /* Увеличил паддинг для красоты */
+  padding: 24px; 
   border-radius: 12px;
   background: var(--color-gray-100);
   border: 1px solid #e0e0e0;
 }
 
-/* --- Location Styles --- */
+
 .locationLabel {
   display: block;
   font-size: 14px;
@@ -33,17 +33,17 @@
   background: var(--color-white);
   border: none;
   border-radius: 12px;
-  font-size: 16px;
-  color: #101828;
+
+  color: var(--color-black);
   outline: none;
 }
 
 /* --- Titles --- */
 .title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
   margin-bottom: 24px;
-  color: #101828;
+  color: var(--color-black);
 }
 
 .group {
@@ -55,8 +55,7 @@
 }
 
 .groupTitle {
-  font-size: 16px;
-  font-weight: 500;
+  font-weight: var( --fw-medium);
   color: #6c717b;
   margin-bottom: 12px;
 }
@@ -88,7 +87,7 @@
   flex-shrink: 0;
 }
 
-/* Кружок внутри при выборе */
+
 .customRadio::after {
   content: "";
   position: absolute;

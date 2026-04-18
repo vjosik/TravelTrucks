@@ -10,7 +10,7 @@
   --color-sage-light: #829b91;
   --color-sage-dark: #6d7b75;
   --color-yellow: #ffc531;
-  --color-red-error: #e44848; /* Для активной рамки/ошибок */
+  --color-red-error: #e44848; 
 
   /* --- Semantic Tokens --- */
 
@@ -54,12 +54,12 @@
     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* --- Font Sizes --- */
-  --fs-h1: 48px; /* Заголовок на главной (Hero) */
-  --fs-h2: 24px; /* Заголовки карточек, разделов */
-  --fs-h3: 20px; /* Подзаголовки (Vehicle details) */
-  --fs-body: 16px; /* Основной текст, описание */
-  --fs-small: 14px; /* Доп. инфо, плейсхолдеры, теги */
-  --fs-tiny: 12px; /* Очень мелкие подписи */
+  --fs-h1: 48px; 
+  --fs-h2: 24px; 
+  --fs-h3: 20px; 
+  --fs-body: 16px; 
+  --fs-small: 14px; 
+  --fs-tiny: 12px; 
 
   /* --- Line Heights --- */
   --lh-tight: 1.2;

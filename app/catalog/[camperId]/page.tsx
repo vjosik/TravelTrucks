@@ -1,113 +1,31 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import { useQuery } from "@tanstack/react-query";
-
-import css from "./CamperDetails.module.css";
-import ImageGallery from "../../../components/ImageGallery/ImageGallery";
+import { Metadata } from "next";
 import { getCampersById } from "../../../lib/api";
-import { CamperFeatures } from "../../../components/CamperFeatures/CamperFeatures";
-import { FaStar } from "react-icons/fa";
-import { HiOutlineMapPin } from "react-icons/hi2";
-import Container from "../../../components/Container/Container";
+import CamperDetailsPage from "./CamperDetailsClient";
 
-// Вспомогательная функция для красивого отображения текста (panel_van -> Panel van)
-const formatValue = (text: string) => {
-  return text.replace("_", " ").replace(/\b\w/g, (l) => l.toUpperCase());
+type Props = {
+  params: { camperId: string };
 };
 
-export default function CamperDetailsPage() {
-  const { camperId } = useParams<{ camperId: string }>();
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  try {
+    const camper = await getCampersById(params.camperId);
 
-  const {
-    data: camper,
-    isLoading,
-    isError,
-  } = useQuery({
-    queryKey: ["camper", camperId],
-    queryFn: () => getCampersById(camperId),
-    enabled: !!camperId,
-  });
+    return {
+      title: `${camper.name} | TravelTrucks`,
+      description: camper.description.slice(0, 160), // Обрезаем для SEO
+      openGraph: {
+        title: camper.name,
+        description: `Rent ${camper.name} in ${camper.location}. Price: €${camper.price}`,
+        images: camper.gallery.map((img) => ({ url: img.original })),
+      },
+    };
+  } catch (error) {
+    return {
+      title: "Camper Details | TravelTrucks",
+    };
+  }
+}
 
-  if (isLoading) return <p className={css.loading}>Loading...</p>;
-  if (isError || !camper) return <p>Error loading camper details.</p>;
-
-  return (
-    <Container>
-      {/* Заголовок и основная инфо */}
-      <div className={css.header}>
-        <h1 className={css.title}>{camper.name}</h1>
-        <div className={css.meta}>
-          <div className={css.rating}>
-            <FaStar className={css.star_icon} fill="#ffc531" />
-            <span>
-              {camper.rating} ({camper.totalReviews} Reviews)
-            </span>
-          </div>
-          <div className={css.location}>
-            <HiOutlineMapPin />
-            <span>{camper.location}</span>
-          </div>
-        </div>
-        <p className={css.price}>€{camper.price.toFixed(2)}</p>
-      </div>
-
-      {/* Галерея */}
-      <div className={css.gallerySection}>
-        <ImageGallery gallery={camper.gallery} />
-      </div>
-
-      {/* Описание */}
-      <div className={css.descriptionSection}>
-        <p className={css.description}>{camper.description}</p>
-      </div>
-
-      {/* Контентная часть: Особенности + Форма */}
-      <div className={css.detailsGrid}>
-        <div className={css.infoColumn}>
-          {/* Переиспользуем твой компонент с иконками */}
-          <div className={css.featuresWrapper}>
-            <CamperFeatures camper={camper} variant="full" />
-          </div>
-
-          {/* Технические характеристики */}
-          <div className={css.details}>
-            <h2 className={css.subTitle}>Vehicle details</h2>
-            <hr className={css.divider} />
-            <ul className={css.detailsList}>
-              <li>
-                <span>Form</span>
-                <span>{formatValue(camper.form)}</span>
-              </li>
-              <li>
-                <span>Length</span>
-                <span>{camper.length}</span>
-              </li>
-              <li>
-                <span>Width</span>
-                <span>{camper.width}</span>
-              </li>
-              <li>
-                <span>Height</span>
-                <span>{camper.height}</span>
-              </li>
-              <li>
-                <span>Tank</span>
-                <span>{camper.tank}</span>
-              </li>
-              <li>
-                <span>Consumption</span>
-                <span>{camper.consumption}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {/* Правая колонка для формы бронирования */}
-      <aside className={css.sidebar}>
-        {/* Сюда мы вставим <BookingForm camperId={camperId} /> на следующем этапе */}
-        <div className={css.sticky_sidebar}>{/* Заглушка для формы */}</div>
-      </aside>
-    </Container>
-  );
+export default function Page({ params }: Props) {
+  return <CamperDetailsPage />;
 }

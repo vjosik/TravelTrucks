@@ -1,0 +1,76 @@
+.container {
+  border: 1px solid var(--color-gray-300);
+  border-radius: 10px;
+  padding: 44px 57px;
+  width: 641px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--color-gray-500);
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border: 1px solid var(--color-gray-300);
+}
+
+.textarea {
+  height: 114px;
+  resize: none;
+}
+
+.dateWrapper {
+  width: 100%;
+}
+
+.dateWrapper :global(.react-datepicker-wrapper) {
+  width: 100%;
+}
+
+.submitBtn {
+  background-color: var(--btn-primary-bg);
+  color: var(--color-white);
+  border: none;
+  padding: 16px 60px;
+  border-radius: 100px;
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: var(--btn-primary-hover);
+}

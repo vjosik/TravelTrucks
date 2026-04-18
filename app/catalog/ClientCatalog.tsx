@@ -8,14 +8,14 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import Filters from "../../components/Filters/Filters";
 import { useSearchParams } from "next/navigation";
 import { Engine, GetCampersParams, Transmission, VehicleForm } from "../../types/campersType";
+import { Loader } from "../../components/Loader/Loader";
 
 export default function Catalog() {
   const searchParams = useSearchParams();
   
-  // Извлекаем текущие фильтры из URL
+  
   const filters: GetCampersParams = {
   location: searchParams.get("location") || undefined,
-  // Используем "as", чтобы TS не ругался на обычную строку
   form: (searchParams.get("form") as VehicleForm) || undefined,
   engine: (searchParams.get("engine") as Engine) || undefined,
   transmission: (searchParams.get("transmission") as Transmission) || undefined,
@@ -48,7 +48,7 @@ export default function Catalog() {
       </aside>
       <div className={css.catalog_container}>
         {isLoading ? (
-          <div>Loading...</div>
+          <Loader/>
         ) : isError ? (
           <div>Error loading data</div>
         ) : (

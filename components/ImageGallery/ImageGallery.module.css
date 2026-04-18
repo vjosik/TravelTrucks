@@ -1,0 +1,50 @@
+.wrapper {
+  width: 638px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSwiper {
+  width: 100%;
+  margin-bottom: 27px;
+  border-radius: 16px;
+  overflow: hidden; 
+}
+
+.main_image {
+  width: 100%; 
+  height: 505px; 
+  object-fit: cover;
+  display: block;
+}
+
+
+.thumbsSwiper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.thumbSlide {
+  cursor: pointer;
+  height: 144px; 
+}
+
+.imageThumbContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.secondary_image {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.thumbsSwiper :global(.swiper-wrapper) {
+  box-sizing: border-box;
+}
