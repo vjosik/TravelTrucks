@@ -1,0 +1,29 @@
+.features_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.feature_badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background-color: #F2F4F7;
+  border-radius: 100px;
+  font-weight: var(--fw-medium);
+  
+  color: var(--color-black);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.feature_badge svg {
+  width: 20px;
+  height: 20px;
+}

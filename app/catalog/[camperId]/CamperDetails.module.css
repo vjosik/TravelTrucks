@@ -1,0 +1,109 @@
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: #101828;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.rating, .location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline; /* Как на макете у локации и отзывов */
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #101828;
+  margin-top: 16px;
+}
+
+/* Описание */
+.descriptionSection {
+  margin: 28px 0 44px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+}
+
+/* Сетка контента */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 448px;
+  gap: 40px;
+}
+
+/* Стили для характеристик (баджей) */
+/* Эти стили должны применяться к LI внутри CamperFeatures */
+.featuresWrapper {
+  margin-bottom: 44px;
+}
+
+/* Если CamperFeatures использует свои стили, убедись, что они такие: */
+.feature_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background-color: #F2F4F7;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #101828;
+}
+
+/* Таблица деталей */
+.subTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #101828;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #DADDE1;
+  margin-bottom: 24px;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detailsList li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+}
+
+.detailsList li span:first-child {
+  color: #101828;
+}
+
+.detailsList li span:last-child {
+  color: #101828;
+}

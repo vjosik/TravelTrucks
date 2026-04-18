@@ -1,0 +1,51 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-inter);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  color: var(--text-main);
+  margin: 0; 
+}
+
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+
+p {
+  font-family: var(--font-inter);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  color: inherit; 
+  transition: color var(--transition-speed);
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--btn-primary-bg); 
+}
+
+

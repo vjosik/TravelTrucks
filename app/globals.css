@@ -1,0 +1,24 @@
+@import "normalize.css";
+@import "./styles/variables.css";
+@import "./styles/typography.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    var(--font-inter), "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}

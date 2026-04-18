@@ -1,0 +1,27 @@
+.catalog_layout {
+  display: flex;
+  flex-direction: row;
+  gap: 64px; 
+  padding: 40px 0;
+  max-width: 1440px;
+}
+
+.sidebar {
+  width: 360px; 
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.catalog_container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.load_more_btn{
+  margin: 0 auto;
+  width: 145px;
+  height: 56px;
+}

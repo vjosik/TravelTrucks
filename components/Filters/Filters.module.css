@@ -1,0 +1,155 @@
+.filters {
+  width: 360px;
+  padding: 24px; /* Увеличил паддинг для красоты */
+  border-radius: 12px;
+  background: var(--color-gray-100);
+  border: 1px solid #e0e0e0;
+}
+
+/* --- Location Styles --- */
+.locationLabel {
+  display: block;
+  font-size: 14px;
+  color: #6c717b;
+  margin-bottom: 8px;
+}
+
+.locationWrapper {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.locationIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.locationInput {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  background: var(--color-white);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #101828;
+  outline: none;
+}
+
+/* --- Titles --- */
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #101828;
+}
+
+.group {
+  margin-bottom: 24px;
+}
+
+.group_trans {
+  margin-bottom: 40px;
+}
+
+.groupTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c717b;
+  margin-bottom: 12px;
+}
+
+/* --- Custom Radio Buttons --- */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.customRadio {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1.5px solid #dadde1;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* Кружок внутри при выборе */
+.customRadio::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-sage-dark, #83a194);
+}
+
+.radioInput:checked ~ .customRadio {
+  border-color: var(--color-sage-dark, #83a194);
+}
+
+.radioInput:checked ~ .customRadio::after {
+  display: block;
+}
+
+.labelText {
+  font-size: 16px;
+  color: #101828;
+}
+
+/* --- Buttons --- */
+.searchBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 200px;
+  background: var(--btn-primary-bg);
+  color: white;
+  border: none;
+  font-weight: 600;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 250ms ease;
+}
+
+.searchBtn:hover {
+  opacity: 0.9;
+}
+
+.clearBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 200px;
+  background: transparent;
+  border: 1px solid #ccc;
+  color: var(--color-black);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 250ms ease;
+}
+
+.clearBtn:hover {
+  background-color: #f7f7f7;
+  border-color: #101828;
+}
