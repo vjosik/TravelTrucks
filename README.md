@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚐 TravelTrucks — Campervan Rental Service
+TravelTrucks is a modern web application for renting campervans, designed for travelers who value freedom and comfort. The application provides a seamless experience for browsing a catalog of vehicles, exploring detailed specifications, reading user reviews, and booking the perfect van for an unforgettable road trip.
 
-## Getting Started
+🔗 Live Links
+Live Demo: TravelTrucks on Vercel
 
-First, run the development server:
+Repository: GitHub Link
 
-```bash
+🚀 Tech Stack
+Core
+Framework: Next.js 16 (App Router)
+
+Language: TypeScript
+
+UI Library: React 19
+
+Data Management & Forms
+State & Fetching: TanStack Query v5 (React Query)
+
+API Client: Axios
+
+Form Handling: React Hook Form
+
+Validation: Yup
+
+UI Components & Styling
+Styling: CSS Modules & Normalize.css
+
+Carousels: Swiper.js
+
+Icons: React Icons
+
+Date Picker: React Datepicker
+
+Notifications: React Hot Toast
+
+✨ Key Features
+Dynamic Catalog: A comprehensive list of campervans with pagination support.
+
+Advanced Filtering: Search by equipment (AC, Kitchen, TV, etc.) and vehicle type (Alcove, Integrated, Van).
+
+Detailed Camper Pages: View high-quality image galleries, technical specifications (length, tank capacity, consumption), and detailed descriptions.
+
+Review System: Access genuine feedback from other travelers, including star ratings and detailed comments.
+
+Smart Booking: An intuitive booking form with real-time validation and a calendar for date selection.
+
+SEO Optimized: Dynamic metadata generation for individual camper pages to ensure high search engine visibility.
+
+🛠️ Installation & Setup
+Clone the repository:
+
+Bash
+git clone https://github.com/vjosik/TravelTrucks.git
+cd TravelTrucks
+Install dependencies:
+
+Bash
+npm install
+Run the development server:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📂 Project Structure
+/app — App Router pages, layouts, and global styles.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+/components — Modular UI components (BookingForm, Loader, Reviews, CamperFeatures, etc.).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+/lib — API configuration and Axios instance.
 
-## Learn More
+/types — Shared TypeScript interfaces for Campers, Reviews, and API responses.
 
-To learn more about Next.js, take a look at the following resources:
+/public — Static assets and global icons.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📡 API Integration
+The app connects to a dedicated backend service to handle:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GET /campers — List all vehicles with filters.
 
-## Deploy on Vercel
+GET /campers/:id — Specific vehicle details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GET /campers/:id/reviews — Fetch reviews for a specific camper.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+POST /campers/:id/booking-requests — Submit a new booking.
+
+Developed for explorers who believe the journey is just as important as the destination. 🌍🚐

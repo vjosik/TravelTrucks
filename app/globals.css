@@ -17,6 +17,10 @@ body {
   min-height: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   font-family:
     var(--font-inter), "Segoe UI", "Helvetica Neue", Arial, sans-serif;

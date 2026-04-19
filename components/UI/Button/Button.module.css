@@ -12,9 +12,10 @@
 
   background-color: var( --btn-primary-bg);
   color: var(--color-white);
-  transition: var(--transition-base);
+  transition: var(--transition-speed);
 }
 
 .btn:hover {
+  color: var(--color-white);
   background-color: var(--btn-primary-hover);
 }

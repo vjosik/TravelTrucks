@@ -32,3 +32,9 @@
   justify-content: center;
   gap: 32px;
 }
+
+
+.list_item:active,
+.list_item:focus{
+color: var(--color-sage-dark)
+}

@@ -8,7 +8,7 @@
 .camper_info_card {
   width: 650px;
   border-radius: 16px;
-  padding: 0 24px;
+  padding: 24px;
   background-color: var(--bg-secondary);
   margin-bottom: 16px;
   min-height: 304px;
@@ -36,7 +36,7 @@
   gap: 4px;
 
   line-height: 1.5;
-  text-decoration: underline; /* Как на макете у локации и отзывов */
+  text-decoration: underline; 
 }
 
 .price {
@@ -47,17 +47,16 @@
   margin-top: 16px;
 }
 
-/* Описание */
+
 .descriptionSection {
-  margin: 28px 0 44px;
+  margin-top:24px;
 }
 
 .description {
-  line-height: 1.5;
-  color: #475467;
+  line-height: var(--lh-base);
+  color: var(--color-gray-500);
 }
 
-/* Сетка контента */
 .detailsGrid {
   display: flex;
   align-items: flex-start;
@@ -65,7 +64,7 @@
   flex-direction: column;
   gap: 24px;
   border-radius: 16px;
-  padding: 024px;
+  padding: 24px;
 
   background-color: var(--bg-secondary);
 }
@@ -74,15 +73,12 @@
   margin-bottom: 16px;
 }
 
-/* Если CamperFeatures использует свои стили, убедись, что они такие: */
+
 .feature_badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 18px;
   background-color: var(--color-gray-200);
-  border-radius: 100px;
-  font-weight: 500;
   color: var(--color-black);
 }
 
