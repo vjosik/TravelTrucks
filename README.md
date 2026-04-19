@@ -1,88 +1,136 @@
-🚐 TravelTrucks — Campervan Rental Service
-TravelTrucks is a modern web application for renting campervans, designed for travelers who value freedom and comfort. The application provides a seamless experience for browsing a catalog of vehicles, exploring detailed specifications, reading user reviews, and booking the perfect van for an unforgettable road trip.
+# 🚐 TravelTrucks — Campervan Rental Service
 
-🔗 Live Links
-Live Demo: TravelTrucks on Vercel
+**TravelTrucks** is a modern web application for renting campervans, designed for travelers who value freedom, flexibility, and comfort. It delivers a seamless experience for browsing available vehicles, exploring detailed specifications, reading authentic reviews, and booking the perfect van for an unforgettable road trip.
 
-Repository: GitHub Link
+---
 
-🚀 Tech Stack
-Core
-Framework: Next.js 16 (App Router)
+## 🔗 Live Links
 
-Language: TypeScript
+* 🌐 **Live Demo:** [TravelTrucks on Vercel](#)
+* 📂 **Repository:** [GitHub Link](#)
 
-UI Library: React 19
+---
 
-Data Management & Forms
-State & Fetching: TanStack Query v5 (React Query)
+## 🚀 Tech Stack
 
-API Client: Axios
+### 🧩 Core
 
-Form Handling: React Hook Form
+* **Framework:** Next.js 16 (App Router)
+* **Language:** TypeScript
+* **UI Library:** React 19
 
-Validation: Yup
+### 📡 Data Management & Forms
 
-UI Components & Styling
-Styling: CSS Modules & Normalize.css
+* **State & Fetching:** TanStack Query v5 (React Query)
+* **API Client:** Axios
+* **Forms:** React Hook Form
+* **Validation:** Yup
 
-Carousels: Swiper.js
+### 🎨 UI & Styling
 
-Icons: React Icons
+* **Styling:** CSS Modules + Normalize.css
+* **Carousels:** Swiper.js
+* **Icons:** React Icons
+* **Date Picker:** React Datepicker
+* **Notifications:** React Hot Toast
 
-Date Picker: React Datepicker
+---
 
-Notifications: React Hot Toast
+## ✨ Key Features
 
-✨ Key Features
-Dynamic Catalog: A comprehensive list of campervans with pagination support.
+### 🚐 Dynamic Catalog
 
-Advanced Filtering: Search by equipment (AC, Kitchen, TV, etc.) and vehicle type (Alcove, Integrated, Van).
+Browse a wide range of campervans with smooth pagination and fast loading.
 
-Detailed Camper Pages: View high-quality image galleries, technical specifications (length, tank capacity, consumption), and detailed descriptions.
+### 🔍 Advanced Filtering
 
-Review System: Access genuine feedback from other travelers, including star ratings and detailed comments.
+Easily find the right vehicle by selecting:
 
-Smart Booking: An intuitive booking form with real-time validation and a calendar for date selection.
+* Equipment (AC, Kitchen, TV, etc.)
+* Vehicle type (Alcove, Integrated, Van)
 
-SEO Optimized: Dynamic metadata generation for individual camper pages to ensure high search engine visibility.
+### 📄 Detailed Camper Pages
 
-🛠️ Installation & Setup
-Clone the repository:
+Each camper includes:
 
-Bash
+* High-quality image gallery
+* Technical specs (length, tank capacity, fuel consumption)
+* Full description
+
+### ⭐ Review System
+
+Read real feedback from other travelers:
+
+* Star ratings
+* Detailed comments
+
+### 📅 Smart Booking
+
+* User-friendly booking form
+* Real-time validation
+* Integrated calendar for date selection
+
+### 🔎 SEO Optimization
+
+* Dynamic metadata generation
+* Improved search engine visibility for each camper page
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/vjosik/TravelTrucks.git
 cd TravelTrucks
-Install dependencies:
+```
 
-Bash
+### 2. Install dependencies
+
+```bash
 npm install
-Run the development server:
+```
 
-Bash
+### 3. Run the development server
+
+```bash
 npm run dev
-Open http://localhost:3000 in your browser.
+```
 
-📂 Project Structure
-/app — App Router pages, layouts, and global styles.
+### 4. Open in browser
 
-/components — Modular UI components (BookingForm, Loader, Reviews, CamperFeatures, etc.).
+```
+http://localhost:3000
+```
 
-/lib — API configuration and Axios instance.
+---
 
-/types — Shared TypeScript interfaces for Campers, Reviews, and API responses.
+## 📂 Project Structure
 
-/public — Static assets and global icons.
+```
+/app         → App Router pages, layouts, global styles  
+/components  → Reusable UI components (BookingForm, Loader, Reviews, CamperFeatures, etc.)  
+/lib         → API configuration and Axios instance  
+/types       → Shared TypeScript interfaces  
+/public      → Static assets and icons  
+```
 
-📡 API Integration
-The app connects to a dedicated backend service to handle:
+---
 
-GET /campers — List all vehicles with filters.
+## 📡 API Integration
 
-GET /campers/:id — Specific vehicle details.
+The application interacts with a backend service:
 
-GET /campers/:id/reviews — Fetch reviews for a specific camper.
+* `GET /campers` → Fetch all vehicles (with filters & pagination)
+* `GET /campers/:id` → Get detailed camper info
+* `GET /campers/:id/reviews` → Retrieve camper reviews
+* `POST /campers/:id/booking-requests` → Submit booking request
 
-POST /campers/:id/booking-requests — Submit a new booking.
+---
 
-Developed for explorers who believe the journey is just as important as the destination. 🌍🚐
+## 🌍 Final Note
+
+Built for explorers who believe the journey is just as important as the destination.
+
+**Travel smart. Travel free. Travel with TravelTrucks. 🚐**
